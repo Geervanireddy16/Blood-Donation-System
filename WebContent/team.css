@@ -1,0 +1,41 @@
+@charset "ISO-8859-1";
+
+
+.carousel-item {
+    padding: 2% 15%;
+    text-align: center;
+}
+.team-image {
+    width: 20%;
+    border-radius: 50%;
+}
+.team-para {
+	text-align:center;
+/*     text-align: left; */
+}
+.team-carousel {
+  padding: 0 4%;
+  margin: 10% 2% 5%;
+}
+
+/* Footer contact */
+
+.footer-container {
+    text-align: center;
+
+}
+
+#footer {
+    
+    padding-top: 70px;
+
+}
+.footer-icon {
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-para {
+    padding-bottom: 10px;
+    color: grey;
+}

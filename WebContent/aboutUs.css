@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+.about-us-card{
+    margin: 10% 2% ;
+    font-family: 'Merriweather', serif;
+}
+.about-us-image {
+    width: 600px;
+}
+.about-us-element {
+    padding: 2%;
+}
+
+.about-us-header,.gallery-header,.team-names {
+    text-align: center;
+    color: grey;
+    padding: 1%;
+
+}
+p {
+    color: grey;
+}

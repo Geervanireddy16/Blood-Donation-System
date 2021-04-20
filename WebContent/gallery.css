@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+.image {
+    width: 100%;
+   
+}
+.img-row {
+    padding: 1%;
+}
+
+.about-us-card ,.gallery-card ,.team-card ,.footer-container{
+    background-color: rgb(238, 241, 241);
+}
