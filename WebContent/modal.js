@@ -1,48 +1,34 @@
-
-// Open the Modal
-function openModal() {
+function openModal() { // Open the Modal
   document.getElementById("myModal").style.display = "block";
 }
 
-  
-// Close the Modal
-function closeModal() {
+function closeModal() { // Close the Modal
   document.getElementById("myModal").style.display = "none";
 }
 
 var slideIndex = 1;
 showSlides(slideIndex);
 
-  
-// Next/previous controls
-
- function plusSlides(n) {
+function plusSlides(n) { // Next/previous controls
   showSlides(slideIndex += n);
 }
 
-
- // Thumbnail image controls
-
- function currentSlide(n) {
+function currentSlide(n) {  // Thumbnail image controls
   showSlides(slideIndex = n);
 }
 
-
- function showSlides(n) {
+function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  var slides = document.getElementsByClassName("mySlides"); // return the array of images
+  var dots = document.getElementsByClassName("demo"); // to return the array of images of thumbnail
   var captionText = document.getElementById("caption");
+    // to display the images selected
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  captionText.innerHTML = dots[slideIndex-1].alt; // to display the alt message of the image
 }
 

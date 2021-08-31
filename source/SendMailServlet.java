@@ -3,14 +3,12 @@ package com.geervani;
 import java.io.IOException;
 import java.sql.*;
 import java.io.PrintWriter;
-
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.util.Date;
 import java.util.Properties;
 import javax.mail.Authenticator;
@@ -42,7 +40,7 @@ public class SendMailServlet extends HttpServlet{
            props.put("mail.store.protocol", "pop3");
            props.put("mail.transport.protocol", "smtp");
            final String username1 = "blooddonationapplicationpbl@gmail.com"; // emailid of Sender
-           final String password1 = "blooddonation@123";  //senders password
+           final String password1 = "";  //senders password
            try{ // creating session object to get properties 
              Session session = Session.getInstance(props, 
                                  new Authenticator(){

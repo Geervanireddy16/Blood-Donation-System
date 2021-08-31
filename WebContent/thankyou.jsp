@@ -60,6 +60,5 @@
       </div>
    </div>  
   </div> 
-<!--     <h1> Successfully Registered, Please check you mail </h1> -->
 </body>
 </html>

@@ -24,11 +24,12 @@ public class RegisterServlet extends HttpServlet{
 		double height = Double.parseDouble(req.getParameter("height"));
 		double weight = Double.parseDouble(req.getParameter("weight"));
 		int id = Integer.parseInt(req.getParameter("id"));
+		String blood_group = req.getParameter("bloodgroup");
 		
         String url="jdbc:mysql://localhost:3306/PBL";
         String username = "root";
-        String password = "";  // enter you sql password
-        String query = "INSERT INTO tb_people(name,email_id,phone_number,age,height,weight,blood_camp_id) VALUES(?,?,?,?,?,?,?)";
+        String password = "";
+        String query = "INSERT INTO tb_people(name,email_id,phone_number,age,height,weight,blood_camp_id,bloodgroup) VALUES(?,?,?,?,?,?,?,?)";
         try {
         	Class.forName("com.mysql.cj.jdbc.Driver");
         	Connection con = DriverManager.getConnection(url,username,password);
@@ -40,6 +41,7 @@ public class RegisterServlet extends HttpServlet{
         	statement.setDouble(5, height);
         	statement.setDouble(6, weight);
         	statement.setInt(7, id);
+        	statement.setString(8, blood_group);
 
         	statement.executeUpdate();
         }        
@@ -50,4 +52,3 @@ public class RegisterServlet extends HttpServlet{
         rd.forward(req,res);
 	}
 }
-

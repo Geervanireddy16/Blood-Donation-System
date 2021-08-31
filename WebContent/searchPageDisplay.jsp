@@ -3,7 +3,7 @@
 <%@ page import = "java.io.IOException,java.io.PrintWriter,java.io.IOException,java.io.PrintWriter" %>
 <%@ page import = "java.sql.*" %>
 <%@ page import = "jakarta.servlet.http.HttpServlet,jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,jakarta.servlet.annotation.WebServlet,jakarta.servlet.http.HttpServlet" %>
-<% Class.forName("com.mysql.cj.jdbc.Driver"); %>
+<% Class.forName("com.mysql.cj.jdbc.Driver"); %> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +28,14 @@
 <body>
             <%
             	String search_query = request.getParameter("search");
+            	//out.println(search_query);
             	String url="jdbc:mysql://localhost:3306/PBL";
             	String username = "root";
-            	String password = "";    <!--enter your sql password -->
+            	String password = "";
                 Connection connection = DriverManager.getConnection(url,username,password);
                 Statement statement = connection.createStatement();
-                String yowassup = "select * from tb_blood_camps where city ='"+ search_query+ "'";
-                ResultSet resultset = statement.executeQuery(yowassup) ;
+                String query = "select * from tb_blood_camps where city ='"+ search_query+ "'";
+                ResultSet resultset = statement.executeQuery(query) ;
             %>
      
      <!-- Search Navigation Bar -->          
@@ -122,7 +123,17 @@
                     	<label for="Bloodcamp_id">Bloodcamp_id</label>
                     	<input type="text" class="form-control" id="exampleInputtext" placeholder="Enter blood camp id"  name = "id" required>
                 	</div>
-                
+<!-- Blood Group -->                	                
+                 	<div class="form-button">
+                	<label for="BloodGroup">BloodGroup</label>
+						<select name="bloodgroup" >
+							<option value="A+">A+</option><option value="A-">A-</option>
+							<option value="B+">B+</option><option value="B-">B-</option>
+							<option value="O+">O+</option><option value="O-">O-</option>
+							<option value="AB+">AB+</option><option value="AB-">AB-</option>
+						</select>
+                	</div>
+                	
                 	<div class="form-button">
                 		<button type="submit" class="form-button btn btn-primary btn-lg">Submit</button>
                 		<button type="close" class="form-button btn btn-danger btn-lg" onclick="closeform()">Close</button>
