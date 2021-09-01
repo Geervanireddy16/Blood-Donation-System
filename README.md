@@ -1,5 +1,4 @@
 # Blood-Donation-System
-PBL Project for College
 An application to organize a blood donation camp and to motivate people to donate blood and social works.
 Users can search for blood camps in nearby vicinty and can register in one. After successful registration, user will be notified via his/her mail.
 
