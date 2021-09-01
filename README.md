@@ -5,7 +5,7 @@ Users can search for blood camps in nearby vicinty and can register in one. Afte
 
 ## Technology Stack
 * **Frontend:** [HTML](https://html.com/), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Bootstrap](https://getbootstrap.com/)
-* **Backend:** [Java Servlets](https://www.javatpoint.com/servlet-tutorial), [JSP(jakarta server pages)](https://www.javatpoint.com/jsp-tutorial)
+* **Backend:** [Java Servlets](https://www.javatpoint.com/servlet-tutorial), [JSP](https://www.javatpoint.com/jsp-tutorial)(Jakarta server pages))
 * **Database:** [MySQL](https://www.mysql.com/)
 
 ## Requirements
